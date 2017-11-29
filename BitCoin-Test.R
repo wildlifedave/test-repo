@@ -71,4 +71,8 @@ colnames(FinalTable) <- c("BuyDate", "SellDate", "Days", "PriceDiff")
 FinalTable <- as.data.frame(FinalTable)
 PriceVector <- FinalTable[[4]]
 DaysVector <- FinalTable[[3]]
+FinalTable[,3] <- as.numeric(as.character(FinalTable[,3]))
+FinalTable[,4] <- as.numeric(as.character(FinalTable[,4]))
+PriceVector <- as.numeric(as.character(PriceVector))
+DaysVector <- as.numeric(as.character(DaysVector))
 # DATA CLASS & TYPE MANIPULATIONS------------------------------------------------
